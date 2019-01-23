@@ -90,9 +90,9 @@ const users = {
                         })
                     })
             }),
-            //删除一个用户,使用async/await语法
+            //删除一个用户
             app.delete("/users/:id", (req, res) => {
-                User.findByIdAndDelete({
+                User.findByIdAndRemove({
                         _id: req.params.id
                     })
                     .then(user => {
